@@ -14,4 +14,6 @@ use App\Http\Controllers\PostController;      //追加
 */
 
 Route::get('/', [PostController::class, 'index']);
+Route::get('/posts/create', [PostController::class, 'create']); //順序!
 Route::get('/posts/{post}', [PostController::class, 'show']);
+Route::post('/posts', [PostController::class, 'store']);
