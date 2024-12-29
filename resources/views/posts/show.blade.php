@@ -16,9 +16,11 @@
     <div class="content">
         <div class="content__post">
             <h3>本文</h3>
+            <a href="">{{ $post->category->name }}</a>
             <p>{{ $post->body }}</p>
         </div>
     </div>
+    <a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a>
     <div class="footer">
         <a href="/">戻る</a>
     </div>
